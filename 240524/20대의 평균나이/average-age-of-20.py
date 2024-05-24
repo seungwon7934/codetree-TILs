@@ -9,4 +9,7 @@ while(True):
         total += n
         cnt += 1
 
-print(f"{total/cnt:.2f}")
+if(cnt == 0):
+    print(0)
+else:
+    print(f"{total/cnt:.2f}")
