@@ -9,4 +9,4 @@ while(True):
     else:
         break
 
-    print(f"{total/cnt:.2f}")
+print(f"{total/cnt:.2f}")
