@@ -5,7 +5,8 @@ while(True):
     n = int(input())
     if(n >= 30):
         break
-    total += n
-    cnt += 1
+    else:
+        total += n
+        cnt += 1
 
 print(f"{total/cnt:.2f}")
