@@ -3,11 +3,10 @@ cnt = 0
 
 while(True):
     n = int(input())
-    if(n >= 30 or n <= 19):
-        break
-    else:
+    if(20 <= n <= 29):
         total += n
         cnt += 1
+    else:
+        break
 
-else:
     print(f"{total/cnt:.2f}")
