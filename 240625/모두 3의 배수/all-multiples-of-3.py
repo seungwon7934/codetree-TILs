@@ -5,9 +5,9 @@ for i in range(5):
 
 tf = True
 
-for i in range(len(arr)):
+for i in range(5):
     if(arr[i] % 3 != 0):
-        tf == False
+        tf = False
         break
 
 if(tf == True):
