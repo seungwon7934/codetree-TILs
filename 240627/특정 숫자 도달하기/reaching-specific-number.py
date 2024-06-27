@@ -9,4 +9,4 @@ for num in arr:
         total += num
         cnt += 1
 
-print(total, total / cnt)
+print(f"{total} {total / cnt}")
