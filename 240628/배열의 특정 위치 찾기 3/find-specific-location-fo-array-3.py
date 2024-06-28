@@ -7,4 +7,4 @@ for num in arr:
     else:
         break
 
-print(sum(arr[:idx:]))
+print(sum(arr[idx - 3:idx:]))
