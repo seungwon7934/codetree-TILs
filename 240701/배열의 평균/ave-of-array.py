@@ -19,4 +19,4 @@ for i in range(4):
     print(col_sum / len(arr2), end=' ')
 print()
 
-print(total / (len(arr2[0]) * len(arr2)))
+print(f"{total / (len(arr2[0]) * len(arr2)):.1f}")
