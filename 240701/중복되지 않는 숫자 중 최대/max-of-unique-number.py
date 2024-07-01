@@ -18,4 +18,8 @@ for i in range(len(idx_list)):
     if(idx_list[i] == 1):
         idx = i
 
-print(idx)
+
+if (idx != 0):
+    print(idx)
+else:
+    print(-1)
