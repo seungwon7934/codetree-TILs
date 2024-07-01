@@ -11,10 +11,10 @@ arr2 = [
 ]
 
 
-for i in range(n):
+for i in range(m):
     arr1[i] = list(map(int, input().split()))
 
-for i in range(n):
+for i in range(m):
     arr2[i] = list(map(int, input().split()))
 
 for i in range(n):
