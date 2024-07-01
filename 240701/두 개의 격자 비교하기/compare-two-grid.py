@@ -17,8 +17,8 @@ for i in range(m):
 for i in range(m):
     arr2[i] = list(map(int, input().split()))
 
-for i in range(n):
-    for j in range(m):
+for i in range(m):
+    for j in range(n):
         if(arr1[i][j] == arr2[i][j]):
             print(0, end=' ')
         else:
