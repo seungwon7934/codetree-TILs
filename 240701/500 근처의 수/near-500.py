@@ -10,6 +10,9 @@ for num in arr:
         if(five_over_min > num):
             five_over_min = num
     else:
+        if(five_under_max > 500):
+            five_under_max = num
+
         if(five_under_max < num):
             five_under_max = num
 
