@@ -5,6 +5,7 @@ enc = []
 for i in range(len(s)):
     if(aph != s[i]):
         enc.append(aph)
+        cnt = str(cnt)
         enc.append(cnt)
         aph = s[i]
         cnt = 0
