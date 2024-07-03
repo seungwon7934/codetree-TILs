@@ -7,7 +7,7 @@ for i in range(len(s)):
     if(aph == s[i]):
         cnt += 1
 
-    if(aph != s[i]):
+    if(aph != s[i] or i == len(s) - 1):
         enc.append(aph)
 
         if(cnt >= 10):
@@ -26,9 +26,9 @@ for i in range(len(s)):
         aph = s[i]
         cnt = 1
 
-    if(i == len(s) - 1):
-        enc.append(aph)
-        enc.append(cnt)
+    # if(i == len(s) - 1):
+    #     enc.append(aph)
+    #     enc.append(cnt)
 
 print(len(enc))
 
