@@ -1,6 +1,6 @@
 s = list(input())
 
-s = s[:2] + s[3:len(s) - 2] + s[len(s) - 1:]
+s = s[:1] + s[2:len(s) - 2] + s[len(s) - 1:]
 
 s = ''.join(s)
 
