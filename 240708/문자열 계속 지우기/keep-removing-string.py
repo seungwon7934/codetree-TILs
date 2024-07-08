@@ -10,8 +10,8 @@ while(isTrue != True):
             a.pop(i)
             a.pop(i)
             break
-
-    if(i == len(a) - 1):
+    
+    if(''.join(a).find(''.join(b)) == -1):
         isTrue = True
 
 print(''.join(a))
