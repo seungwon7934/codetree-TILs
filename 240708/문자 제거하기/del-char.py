@@ -5,5 +5,5 @@ while(len(s) != 1):
     if(len(s) <= idx - 1):
         s.pop(len(s) - 1)
     else:
-        s.pop(idx)
+        s.pop(idx-1)
     print(''.join(s))
