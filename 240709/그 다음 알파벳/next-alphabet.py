@@ -1,3 +1,3 @@
 aph = input()
 
-print(chr((ord(aph)) % 122 + 1))
+print(chr((ord(aph) - 96) % 26 + 97))
