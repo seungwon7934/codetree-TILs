@@ -1,6 +1,6 @@
 def num_rect(n):
     for i in range(n**2):
-        if(i != 0 and i % 4 == 0):
+        if(i != 0 and i % n == 0):
             print()
         print(i % 9 + 1,end=' ')
 
