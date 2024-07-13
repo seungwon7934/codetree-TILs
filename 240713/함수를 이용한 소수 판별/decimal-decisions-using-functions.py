@@ -15,6 +15,6 @@ def sum_prime(a, b):
 a, b = map(int, input().split())
 
 if(b == 1):
-    print(1)
-
-print(sum_prime(a, b))
+    print(0)
+else:
+    print(sum_prime(a, b))
