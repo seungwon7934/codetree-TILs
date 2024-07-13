@@ -5,7 +5,7 @@ def find_digits(n):
         q = n // 10
         r = n % 10
 
-        if((q != 0 and r != 0) and (q % 3 == 0 or r % 3 == 0)):
+        if(r != 0) and (r % 3 == 0):
             isTrue = True
             break
         n = q
