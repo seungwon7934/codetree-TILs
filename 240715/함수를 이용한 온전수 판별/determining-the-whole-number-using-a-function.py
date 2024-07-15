@@ -10,7 +10,7 @@ def isPerfect(n):
 a, b = map(int, input().split())
 total = 0
 
-for i in range(a, b):
+for i in range(a, b + 1):
     if(isPerfect(i)):
         total += 1
 
