@@ -9,6 +9,11 @@ def isTrue(m, d):
                 return True
 
         else:
+            if(m == 2):
+                if(d > 29):
+                    return False
+                else:
+                    return True
             if(d > 30):
                 return False
             else:
