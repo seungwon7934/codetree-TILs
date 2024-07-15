@@ -10,7 +10,7 @@ def isTrue(m, d):
 
         else:
             if(m == 2):
-                if(d > 29):
+                if(d > 28):
                     return False
                 else:
                     return True
