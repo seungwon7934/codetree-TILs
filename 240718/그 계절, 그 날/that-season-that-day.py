@@ -8,8 +8,11 @@ def isLeap(y):
     return False
 
 def isPresent(leap, m, d):
-    if(leap == True and m == 2 and d > 29):
-        return -1
+    if(leap == True and m == 2):
+        if(d > 29):
+            return -1
+        else:
+            return m
     if(m == 1 or m == 3 or m == 5 or m == 7 or m == 8 or m == 0 or m == 12):
         if(d > 31):
             return -1
