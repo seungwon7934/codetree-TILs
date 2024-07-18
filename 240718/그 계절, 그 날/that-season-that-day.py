@@ -10,12 +10,12 @@ def isLeap(y):
 def isPresent(leap, m, d):
     if(leap == True and m == 2 and d > 29):
         return -1
-    if(m == 1 or 3 or 5 or 7 or 8 or 10 or 12):
+    if(m == 1 or m == 3 or m == 5 or m == 7 or m == 8 or m == 0 or m == 12):
         if(d > 31):
             return -1
         else:
             return m
-    elif(m == 4 or 6 or 9 or 11):
+    elif(m == 4 or m == 6 or m == 9 or m == 11):
         if(d > 30):
             return -1
         else:
