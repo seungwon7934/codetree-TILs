@@ -12,6 +12,6 @@ def b(n):
 
 n = int(input())
 
-a(n)
-print()
 b(n)
+print()
+a(n)
