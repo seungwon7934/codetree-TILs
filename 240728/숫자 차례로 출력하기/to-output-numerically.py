@@ -1,17 +1,17 @@
-def p(n):
+def a(n):
     if(n == 0):
         return
-    print(n,end=' ')
-    p(n-1)
+    print(n, end=' ')
+    a(n-1)
 
-def q(n):
+def b(n):
     if(n == 0):
         return
-    print(8-n,end=' ')
-    q(n-1)
+    b(n-1)
+    print(n,end=' ')
 
 n = int(input())
 
-q(n)
+a(n)
 print()
-p(n)
+b(n)
