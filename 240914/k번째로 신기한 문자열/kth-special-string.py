@@ -9,4 +9,4 @@ for _ in range(n):
 
 arr.sort()
 
-print(arr[arr.index(t) + 3])
+print(arr[arr.index(t) + k])
