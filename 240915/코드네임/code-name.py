@@ -12,7 +12,7 @@ idx = 0
 sc = 100
 for i in range(len(students)):
     _, s = students[i]
-    if(sc < int(s)):
+    if(sc > int(s)):
         sc = int(s)
         idx = i
 
