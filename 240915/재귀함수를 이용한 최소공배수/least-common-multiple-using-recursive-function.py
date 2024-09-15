@@ -1,9 +1,5 @@
 import math
 
-n = int(input())
-arr = map(int, input().split())
-arr = list(arr)
-
 def lcm(m, a):
     global n
     if(a == n):
@@ -14,4 +10,11 @@ def lcm(m, a):
         m = (m * arr[a]) // math.gcd(m, arr[a])
     return lcm(m, a+1)
 
-print(lcm(1, 0))
+n = int(input())
+arr = map(int, input().split())
+arr = list(arr)
+
+if(len(arr) == 1):
+    print(arr[0])
+else:
+    print(lcm(1, 0))
