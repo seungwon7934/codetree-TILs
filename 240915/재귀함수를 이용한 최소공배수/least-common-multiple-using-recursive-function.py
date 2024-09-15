@@ -9,7 +9,7 @@ def lcm(m, a):
     if(a == n):
         return m
     if(a == 0):
-        m = (arr[a] * arr[a+1]) // math.gcd(arr[a], arr[a+1])
+        m = (arr[0] * arr[1]) // math.gcd(arr[0], arr[1])
     else:
         m = (m * arr[a]) // math.gcd(m, arr[a])
     return lcm(m, a+1)
