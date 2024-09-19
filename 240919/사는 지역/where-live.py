@@ -14,6 +14,8 @@ for _ in range(n):
     i = info(arr[0], arr[1], arr[2])
     infos.append(i)
 
+infos.sort(key=lambda x:x.name)
+
 i = infos[n-1]
 print(f"name {i.name}")
 print(f"addr {i.address}")
