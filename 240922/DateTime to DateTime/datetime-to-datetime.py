@@ -5,7 +5,7 @@ if(b < 11):
 elif(b == 11 and c < 11):
     print(-1)
 else:
-    d = 11 - a
-    h = 24 * d - abs(11 - b)
-    m = 60 * h - abs(11 - c)
-    print(abs(m))
+    d = a - 11
+    h = 24 * d + (b - 11)
+    m = 60 * h + (c - 11)
+    print(m)
