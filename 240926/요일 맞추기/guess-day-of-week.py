@@ -7,19 +7,20 @@ m1, d1, m2, d2 = map(int, input().split())
 m = m2 - m1
 d = 0
 
-if(m == 0):
-    d = d2 - d1
-elif(m > 0):
+if(m > 0):
     for i in range(m1, m1 + m):
         d += month_day[i]
     d = d - d1 + d2
+    print(days[(6 + d % 7) % 6])
 else:
-    for i in range(m2, m1 - m):
+    for i in range(m2, m2 - m):
         d += month_day[i]
     d = d + d1 - d2
+    d = d % 7
+    print(days[(7 - d) % 7])
 
-
-print(days[(7 - (7-d) % 7) % 7])
+# print(d)
+# print(days[(6 + d % 6) % 6])
 
 # 1. 처음 날짜랑 두 번째 날짜를 비교함
 # 2. 두 가지 경우로 나뉨
@@ -36,3 +37,8 @@ print(days[(7 - (7-d) % 7) % 7])
 # ex2) 6/1 - 5/3
 #      달: -1
 #      31 + 1 - 3 = 29
+
+# 했어
+# 그러면 d = 양수, 0, 음수로 나옴
+
+# 0이면 상관없음
