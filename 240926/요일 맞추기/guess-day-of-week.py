@@ -11,7 +11,7 @@ if(m > 0):
     for i in range(m1, m1 + m):
         d += month_day[i]
     d = d - d1 + d2
-    print(days[(6 + d % 7) % 6])
+    print(days[d % 7])
 else:
     for i in range(m2, m2 - m):
         d += month_day[i]
