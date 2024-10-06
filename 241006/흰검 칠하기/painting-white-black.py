@@ -1,2 +1,7 @@
 n = int(input())
-line = [0] * 1000001
+line = [0] * 2000001
+
+for _ in range(n):
+    x, d = input().split()
+
+    # if(d == "L"):
