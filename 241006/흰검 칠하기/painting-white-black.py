@@ -55,41 +55,54 @@ w = b = g = 0
 # for tile in line:
 #     print(tile.index, tile.color, tile.count)
 
+# for tile in line:
+#     arr = list(tile.color)
+
+#     count_w = 0
+#     count_b = 0
+
+#     for c in arr:
+#         if(c == "w"):
+#             count_w += 1
+#         else:
+#             count_b += 1
+
+#     if(count_w >= 2 and count_b >= 2):
+#         g += 1
+
+#     else:
+#         if(arr[len(arr) - 1] == "w"):
+#             w += 1
+#         else:
+#             b += 1
+
+# print(w, b, g)
+
 for tile in line:
     arr = list(tile.color)
 
-    count_w = 0
-    count_b = 0
-
-    for c in arr:
-        if(c == "w"):
-            count_w += 1
-        else:
-            count_b += 1
-
-    if(count_w >= 2 and count_b >= 2):
-        g += 1
-
-    else:
-        if(arr[len(arr) - 1] == "w"):
+    if(len(arr) < 4):
+        if(arr[len(arr)-1] == "w"):
             w += 1
         else:
             b += 1
+    else:
+        count_w = 0
+        count_b = 0
+
+        for c in arr:
+            if(c == "w"):
+                count_w += 1
+            else:
+                count_b += 1
+
+        if(count_w >= 2 and count_b >= 2):
+            g += 1
+
+        else:
+            if(arr[len(arr) - 1] == "w"):
+                w += 1
+            else:
+                b += 1
 
 print(w, b, g)
-
-    # if(len(arr) < 4):
-    #     if(arr[len(arr)-1] == "w"):
-    #         w += 1
-    #     else:
-    #         b += 1
-    # else:
-    #     count_w = 0
-    #     count_b = 0
-
-    #     for c in arr:
-    #         if(c == "w"):
-    #             count_w += 1
-    #         else:
-    #             count_b += 1
-    #     if(count_w)
