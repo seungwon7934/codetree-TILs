@@ -14,11 +14,11 @@ for _ in range(n):
 
     if(d == "L"):
         if(len(line) == 0):
-            for i in range(idx - x, idx):
+            for i in range(idx, idx - x , -1):
                 line.append(Tile(i, "w", 1))
 
         else:
-            for i in range(idx - x, idx):
+            for i in range(idx, idx - x, -1):
                 exist = False
 
                 for tile in line:
@@ -29,7 +29,7 @@ for _ in range(n):
 
                 if(exist == False):
                     line.append(Tile(i, "w", 1))
-        idx -= x
+        idx -= x - 1
 
     else:
         if(len(line) == 0):
@@ -48,9 +48,12 @@ for _ in range(n):
                         
                 if(exist == False):
                     line.append(Tile(i, "b", 1))
-        idx += x
+        idx += x - 1
 
 w = b = g = 0
+
+# for tile in line:
+#     print(tile.index, tile.color, tile.count)
 
 for tile in line:
     if(tile.count >= 4):
