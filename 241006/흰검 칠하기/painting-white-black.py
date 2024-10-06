@@ -14,7 +14,7 @@ for _ in range(n):
 
     if(d == "L"):
         if(len(line) == 0):
-            for i in range(idx, idx - x , -1):
+            for i in range(idx, idx - x, -1):
                 line.append(Tile(i, "w", 1))
 
         else:
@@ -23,7 +23,7 @@ for _ in range(n):
 
                 for tile in line:
                     if(tile.index == i):
-                        tile.color = "w"
+                        tile.color += "w"
                         tile.count += 1
                         exist = True
 
@@ -42,7 +42,7 @@ for _ in range(n):
 
                 for tile in line:
                     if(tile.index == i):
-                        tile.color = "b"
+                        tile.color += "b"
                         tile.count += 1
                         exist = True
                         
@@ -56,12 +56,40 @@ w = b = g = 0
 #     print(tile.index, tile.color, tile.count)
 
 for tile in line:
-    if(tile.count >= 4):
+    arr = list(tile.color)
+
+    count_w = 0
+    count_b = 0
+
+    for c in arr:
+        if(c == "w"):
+            count_w += 1
+        else:
+            count_b += 1
+
+    if(count_w >= 2 and count_b >= 2):
         g += 1
+
     else:
-        if(tile.color == "w"):
+        if(arr[len(arr) - 1] == "w"):
             w += 1
         else:
             b += 1
 
 print(w, b, g)
+
+    # if(len(arr) < 4):
+    #     if(arr[len(arr)-1] == "w"):
+    #         w += 1
+    #     else:
+    #         b += 1
+    # else:
+    #     count_w = 0
+    #     count_b = 0
+
+    #     for c in arr:
+    #         if(c == "w"):
+    #             count_w += 1
+    #         else:
+    #             count_b += 1
+    #     if(count_w)
