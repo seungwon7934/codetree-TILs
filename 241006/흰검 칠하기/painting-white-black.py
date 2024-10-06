@@ -26,6 +26,7 @@ for _ in range(n):
                         tile.color += "w"
                         tile.count += 1
                         exist = True
+                        break;
 
                 if(exist == False):
                     line.append(Tile(i, "w", 1))
@@ -45,6 +46,7 @@ for _ in range(n):
                         tile.color += "b"
                         tile.count += 1
                         exist = True
+                        break;
                         
                 if(exist == False):
                     line.append(Tile(i, "b", 1))
