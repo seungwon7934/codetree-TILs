@@ -7,7 +7,7 @@ for _ in range(n):
     x = int(x)
 
     if(d == "L"):
-        for i in range(idx, idx - x, -1):
+        for i in range(idx - x, idx):
             line[i] += 1
         idx = idx - x
     else:
