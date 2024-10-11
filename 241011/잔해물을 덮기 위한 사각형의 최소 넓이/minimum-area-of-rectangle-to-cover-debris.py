@@ -49,8 +49,12 @@ for x in range(x3, x4):
 
 keys_list = list(c.keys())
 
-# 첫 번째 키와 마지막 키
-first_key = keys_list[0]
-last_key = keys_list[-1]
+if (keys_list is None):
+    print(0)
 
-print( (last_key[0] - first_key[0] + 1) * (last_key[1] - first_key[1] + 1))
+else:
+    # 첫 번째 키와 마지막 키
+    first_key = keys_list[0]
+    last_key = keys_list[-1]
+
+    print( (last_key[0] - first_key[0] + 1) * (last_key[1] - first_key[1] + 1))
