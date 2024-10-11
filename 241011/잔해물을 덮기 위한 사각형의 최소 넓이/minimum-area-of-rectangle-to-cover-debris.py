@@ -48,13 +48,15 @@ for x in range(x3, x4):
             del c[(x, y)]
 
 keys_list = list(c.keys())
-# print(len(keys_list))
 
 if (len(keys_list)  == 0):
     print(0)
 
 else:
-    # 첫 번째 키와 마지막 키
-    first_key = keys_list[0]
-    last_key = keys_list[-1]
-    print( (last_key[0] - first_key[0] + 1) * (last_key[1] - first_key[1] + 1))
+    # 남아있는 좌표의 최소 및 최대 경계 찾기
+    x_min = min(key[0] for key in keys_list)
+    y_min = min(key[1] for key in keys_list)
+    x_max = max(key[0] for key in keys_list)
+    y_max = max(key[1] for key in keys_list)
+
+    print( (x_max - x_min + 1) * (y_max - y_min + 1))
