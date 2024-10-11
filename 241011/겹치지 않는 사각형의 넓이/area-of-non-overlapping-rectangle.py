@@ -25,13 +25,7 @@ for i in range(3):
     else:
         for x in range(x1, x2):
             for y in range(y1, y2):
-                c[(x,y)] = 0
+                if( (x,y) in c):
+                    del c[(x, y)]
 
-total = 0
-
-for x in range(min_x, 2000):
-    for y in range(min_y, 2000):
-        if(c.get( (x,y) )):
-            total += 1
-
-print(total)
+print(len(c.keys()))
