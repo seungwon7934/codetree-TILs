@@ -1,5 +1,8 @@
 c = {}
 
+min_x = 2000
+min_y = 2000
+
 for i in range(3):
 
     x1, y1, x2, y2 = map(int, input().split())
@@ -8,6 +11,12 @@ for i in range(3):
     y1 += 1000
     x2 += 1000
     y2 += 1000
+
+    if(min_x > x1):
+        min_x = x1
+    
+    if(min_y > y1):
+        min_y = y1
 
     if(i < 2):
         for x in range(x1, x2):
@@ -20,8 +29,8 @@ for i in range(3):
 
 total = 0
 
-for x in range(2000):
-    for y in range(2000):
+for x in range(min_x, 2000):
+    for y in range(min_y, 2000):
         if(c.get( (x,y) )):
             total += 1
 
