@@ -20,8 +20,9 @@ for i in range(0, n):
         cnt += 1
     
     else:
-        if(cnt > l):
-            l = cnt
         cnt = 1
 
+    if(cnt > l):
+        l = cnt
+    
 print(l)
