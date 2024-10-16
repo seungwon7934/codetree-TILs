@@ -44,5 +44,5 @@ for t in range(1, len(a)):
         print(t)
         break
     
-if(t == len(a) - 1):
-    print(-1)
+    if(t == len(a) - 1 and (a[t] != b[t])):
+        print(-1)
