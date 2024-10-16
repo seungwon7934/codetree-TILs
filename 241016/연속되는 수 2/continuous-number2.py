@@ -22,5 +22,6 @@ else:
             if(cnt > m):
                 m = cnt
             cnt = 1
-
+    if(cnt > m):
+        m = cnt
     print(m)
