@@ -8,7 +8,7 @@ b = {}
 for _ in range(n):
     v, t = map(int, input().split())
 
-    for i in range(time, time + t + 1):
+    for i in range(time, time + t):
         a[i] = idx
         idx += v
     time += t
@@ -19,7 +19,7 @@ idx = 0
 for _ in range(m):
     v, t = map(int, input().split())
 
-    for i in range(time, time + t + 1):
+    for i in range(time, time + t):
         b[i] = idx
         idx += v
     time += t
@@ -30,10 +30,10 @@ for i in range(len(a)):
     if(i == 0):
         continue
 
-    if(a[i-1] >= b[i-1] and a[i] < b[i]): # B가 앞지르는 경우
+    if(a[i-1] >= b[i-1] and a[i] < b[i]):
         cnt += 1
 
-    if(b[i-1] >= a[i-1] and b[i] < a[i]): # A가 앞지르는 경우
+    if(b[i-1] >= a[i-1] and b[i] < a[i]):
         cnt += 1
 
-print(cnt - 1)
+print(cnt-1)
