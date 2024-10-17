@@ -35,7 +35,7 @@ if(len_a >= len_b): # b가 더 짧을 때
             cnt += 1
     
     for i in range(t, len_a):
-        if(b[t-2] != a[i-1] and b[t-1] == b[i]):
+        if(b[t-1] == b[i]):
             cnt += 1
 else:   # a가 더 짧을 때
     t = len_a
@@ -44,7 +44,8 @@ else:   # a가 더 짧을 때
             cnt += 1
     
     for i in range(t, len_b):
-        if(a[t-2] != b[i-1] and a[t-1] == b[i]):
+        if(a[t-1] == b[i]):
             cnt += 1
+
 
 print(cnt)
