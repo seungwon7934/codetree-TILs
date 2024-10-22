@@ -22,6 +22,7 @@ for _ in range(T):
 for i in range(250):
     if(i in dev_meeting_list):
         x, y = dev_meeting_list[i]
+        print(x, y)
 
         if(dev_infection_count_list[x] > 0 and dev_infection_count_list[y] >= 0):
             dev_infection_count_list[x] -= 1
