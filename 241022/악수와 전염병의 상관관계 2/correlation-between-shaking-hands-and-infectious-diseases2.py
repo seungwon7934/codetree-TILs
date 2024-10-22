@@ -32,12 +32,12 @@ for i in range(250):
         if((dev_infection_list[x] == 1 and dev_infection_count_list[x] > 0) and dev_infection_list[y] == 0):
             dev_infection_count_list[x] -= 1
             dev_infection_list[y] = 1
-            dev_infection_count_list[y] = 2
+            dev_infection_count_list[y] = k
         
         elif((dev_infection_list[y] == 1 and dev_infection_count_list[y] > 0) and dev_infection_list[x] == 0):
             dev_infection_count_list[y] -= 1
             dev_infection_list[x] = 1
-            dev_infection_count_list[x] = 2    
+            dev_infection_count_list[x] = k
 
 for i in range(1, len(dev_infection_list)):
     print(dev_infection_list[i], end='')
