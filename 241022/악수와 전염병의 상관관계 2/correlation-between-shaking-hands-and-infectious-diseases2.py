@@ -20,24 +20,24 @@ for _ in range(T):
         dev_meeting_list[t] = (x,y)
 
 for i in range(250):
+
     if(i in dev_meeting_list):
         x, y = dev_meeting_list[i]
-        print(x, y)
 
-        if(dev_infection_count_list[x] > 0 and dev_infection_count_list[y] >= 0):
+        if(dev_infection_list[x] == 1 and dev_infection_list[y] == 1):
             dev_infection_count_list[x] -= 1
-            dev_infection_count_list[y] = 2
+            dev_infection_count_list[y] -= 1
+            continue
+        
+        if((dev_infection_list[x] == 1 and dev_infection_count_list[x] > 0) and dev_infection_list[y] == 0):
+            dev_infection_count_list[x] -= 1
             dev_infection_list[y] = 1
-
+            dev_infection_count_list[y] = 2
         
-        elif(dev_infection_count_list[y] > 0 and dev_infection_count_list[x] >= 0):
+        elif((dev_infection_list[y] == 1 and dev_infection_count_list[y] > 0) and dev_infection_list[x] == 0):
             dev_infection_count_list[y] -= 1
-            dev_infection_count_list[x] = 2
             dev_infection_list[x] = 1
-        
-        elif(dev_infection_count_list[x] > 0 and dev_infection_count_list[y] > 0):
-            dev_infection_count_list[x] -= 1
-            dev_infection_count_list[y] -= 1
+            dev_infection_count_list[x] = 2    
 
 for i in range(1, len(dev_infection_list)):
     print(dev_infection_list[i], end='')
