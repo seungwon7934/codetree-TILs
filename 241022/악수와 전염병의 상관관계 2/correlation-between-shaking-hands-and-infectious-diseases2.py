@@ -6,7 +6,7 @@ N, k, p, T = map(int, input().split())
 # t: 악수 진행 횟수
 
 dev_meeting_list = {}  # 개발자 만남 리스트
-dev_infection_count_list = [0] * (N + 1)  # 개발자 감염 횟수
+dev_infection_count_list = [0] * (N + 1)  # 개발자 감염 유무 
 dev_infection_list = [0] * (N + 1) # 감염된 개발자 리스트
 
 dev_infection_count_list[p] = 2
@@ -23,13 +23,13 @@ for i in range(250):
     if(i in dev_meeting_list):
         x, y = dev_meeting_list[i]
 
-        if(dev_infection_count_list[x] > 0 and dev_infection_count_list[y] == 0):
+        if(dev_infection_count_list[x] > 0 and dev_infection_count_list[y] >= 0):
             dev_infection_count_list[x] -= 1
             dev_infection_count_list[y] = 2
             dev_infection_list[y] = 1
 
         
-        elif(dev_infection_count_list[y] > 0 and dev_infection_count_list[x] == 0):
+        elif(dev_infection_count_list[y] > 0 and dev_infection_count_list[x] >= 0):
             dev_infection_count_list[y] -= 1
             dev_infection_count_list[x] = 2
             dev_infection_list[x] = 1
