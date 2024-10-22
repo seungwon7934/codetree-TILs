@@ -9,7 +9,7 @@ dev_meeting_list = {}  # 개발자 만남 리스트
 dev_infection_count_list = [0] * (N + 1)  # 개발자 감염 유무 
 dev_infection_list = [0] * (N + 1) # 감염된 개발자 리스트
 
-dev_infection_count_list[p] = 2
+dev_infection_count_list[p] = k
 dev_infection_list[p] = 1
 
 for _ in range(T):
