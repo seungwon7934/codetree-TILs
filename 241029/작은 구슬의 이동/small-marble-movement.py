@@ -16,7 +16,7 @@ else:
     dir_num = 3
 
 
-for _ in range(n):
+for _ in range(t):
     x, y = x + dx[dir_num], y + dy[dir_num]
 
     if(x == n):
