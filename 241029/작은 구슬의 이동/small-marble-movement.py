@@ -28,11 +28,11 @@ for _ in range(t):
         x += 1
         continue
     if(y == n):
-        dir_num = 1
+        dir_num = 0
         y -= 1
-        
+
     if(y == -1):
-        dir_num = 2
+        dir_num = 1
         y += 1
 
 print(y+1, x+1)
