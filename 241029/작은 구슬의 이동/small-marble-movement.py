@@ -22,12 +22,17 @@ for _ in range(t):
     if(x == n):
         dir_num = 2
         x -= 1
+        continue
     if(x == -1):
         dir_num = 3
         x += 1
+        continue
     if(y == n):
         dir_num = 1
+        y -= 1
+        
     if(y == -1):
         dir_num = 2
+        y += 1
 
 print(y+1, x+1)
