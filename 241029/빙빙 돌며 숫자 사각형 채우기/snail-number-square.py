@@ -1,6 +1,6 @@
 n, m = map(int, input().split())
 
-result = [[0] * n for _ in range(n)]
+result = [[0] * n for _ in range(m)]
 
 dx, dy = [1, 0, -1, 0], [0, 1, 0, -1]
 
