@@ -9,12 +9,12 @@ dir_num = 0
 x, y = 0, 0
 
 def in_range(x, y):
-    return x >= 0 and x <= m and y >= 0 and y <= n
+    return x >= 0 and x < m and y >= 0 and y < n
 
 for i in range(n * m):
     result[y][x] = i + 1
 
-    if(in_range(x + dx[dir_num], y + dy[dir_num]) == False and result[y + dy[dir_num]][x + dx[dir_num]] != 0):
+    if(in_range(x + dx[dir_num], y + dy[dir_num]) == False or result[y + dy[dir_num]][x + dx[dir_num]] != 0):
         dir_num = (dir_num + 1) % 4
 
     x, y = x + dx[dir_num], y + dy[dir_num]
