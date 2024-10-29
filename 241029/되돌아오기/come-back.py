@@ -32,5 +32,6 @@ for i in arr:
     if(arr[i] == (0, 0)):
         print(i)
         break
-    if(i == len(arr) - 1 and arr[i] != (0, 0)):
+
+    if(i == len(arr) and arr[i] != (0, 0)):
         print(-1)
